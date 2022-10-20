@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body, input, select, textarea, button {
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #a8a8b3;
+}
+
