@@ -1,4 +1,5 @@
 import Image from "next/future/image";
+import * as Dialog from "@radix-ui/react-dialog";
 
 import LogoRocketseat from "../assets/rocketseat-logo.svg";
 import LogoGithub from "../assets/github-logo.svg";
@@ -51,7 +52,26 @@ export default function Home() {
         </article>
       </main>
       <footer className={styles.footer}>
-        <a href="https://github.com/grasielarosa">feito por Grasiela Rosa</a>
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <button type="button">Termos de Uso</button>
+          </Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Overlay className={styles.overlay} />
+            <Dialog.Content className={styles.modal}>
+              <Dialog.Title>Esses são os termos de uso</Dialog.Title>
+              <Dialog.Description>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+                dolore pariatur quo ducimus aperiam repudiandae consequuntur
+                voluptatum iure accusantium, maiores vero totam doloribus minima
+                corporis necessitatibus dignissimos fuga cupiditate est.
+              </Dialog.Description>
+              <Dialog.Close className={styles.button}>
+                Fechar termos de uso
+              </Dialog.Close>
+            </Dialog.Content>
+          </Dialog.Portal>
+        </Dialog.Root>
       </footer>
     </>
   );
